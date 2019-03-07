@@ -1,0 +1,4 @@
+Servidor: files.000webhost.com
+Nombre de usuario: files.000webhost.com
+Contraseña: aprendiendo_php
+Puerto: 21
