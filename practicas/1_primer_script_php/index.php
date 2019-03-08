@@ -14,6 +14,9 @@ $nombre = "Cristian";
     <title>Bienvenido <?php echo $nombre; ?></title>
 </head>
 <body>
+
+    <div id="principal"></div> 
+
     Esto es un documento PHP
     <?php echo "Este codigo es de PHP"; ?>
 
