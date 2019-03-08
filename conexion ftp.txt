@@ -1,4 +1,5 @@
+Nombre de mi pagina: xtudioplay.000webhostapp.com
 Servidor: files.000webhost.com
-Nombre de usuario: files.000webhost.com
+Nombre de usuario: xtudioplay
 Contraseña: aprendiendo_php
 Puerto: 21
