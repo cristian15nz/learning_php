@@ -1,5 +1,6 @@
 <?php
-$saludo = "Bienvenidos a mi sitio web XtudioPlay";
-$titulo = "index";
+
+$titulo = "XtudioPlay";
 
 require "app/vistas/index.vista.php";
+

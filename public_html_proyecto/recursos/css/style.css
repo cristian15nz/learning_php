@@ -1,0 +1,27 @@
+/* Ocultar el div molesto de 000webhost */
+body a[title] {
+    display: none;
+}
+
+#bienvenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login form {
+    padding: 30px 15px;
+    border: solid 1px white;
+    border-radius: 15px;
+    background: white;
+    color: black;
+}

@@ -12,25 +12,6 @@
     <!-- Incluir Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <style>
-        #login {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        body a[title] {
-            display: none;
-        }
-
-        #login form {
-            padding: 30px 15px;
-            border: solid 1px white;
-            border-radius: 15px;
-            background: white;
-            color: black;
-        }
-
-    </style>
-</head>
+    <!-- Incluir los estilos -->
+    <link rel="stylesheet" href="recursos/css/style.css">
+</head> 
