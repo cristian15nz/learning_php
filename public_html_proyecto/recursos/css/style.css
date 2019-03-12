@@ -3,9 +3,20 @@ body a[title] {
     display: none;
 }
 
+body {
+    transition: background ease .3s;
+}
+
+.container.fondo-laptop {
+    background: url('../img/life.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+
 #bienvenido {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     height: 100vh;

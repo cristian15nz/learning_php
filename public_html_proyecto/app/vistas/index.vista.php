@@ -1,9 +1,10 @@
 <?php require '_head.php'; ?>
 
 <body class="bg-light">
-    <div class="container">
-        <section id="bienvenido" class="text-center">
+    <div class="container fondo-laptop">
+        <section id="bienvenido">
             <h1>Bienvenidos a <i class="fab fa-xing-square"></i> XtudioPlay</h1>
+            <p class="lead">Un lugar donde puedes expresar tus ideas.</p>
             <br>
             <div>
                 <a class="btn btn-primary" href="login.php">Iniciar sesión</a>
