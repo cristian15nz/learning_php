@@ -13,7 +13,7 @@
                     <hr>
                     <h4 class="mb-4">Iniciar sesión</h4>
 
-                    <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autofocus>
+                    <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autofocus autocapitalize="off">
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required>
                     <button class="btn btn-primary btn-block mb-3" type="submit">Iniciar sesión</button>
                     <em class="text-danger">Usuario o contraseña incorrectos</em>

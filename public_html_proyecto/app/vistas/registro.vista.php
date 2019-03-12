@@ -14,7 +14,7 @@
                     <h4 class="mb-4">Registrarse</h4>
                     <input class="form-control mb-3" type="text" name="inputName" placeholder="Nombre" required autofocus>
                     <input class="form-control mb-3" type="email" name="inputEmail" placeholder="Email" required>
-                    <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required>
+                    <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autocapitalize="off">
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required>
                     <button class="btn btn-primary btn-block mb-3" type="submit">Registrarse</button>
                     <hr>
