@@ -9,7 +9,7 @@
 
                 <!-- form -->
                 <form action="" method="post">
-                    <h4><a href="/"><i class="fab fa-xing-square"></i> XtudioPlay</a></h4>
+                    <h4><i class="fab fa-xing-square"></i> XtudioPlay</h4>
                     <hr>
                     <h3 class="font-weight-normal mb-4">Iniciar sesión</h3>
 
