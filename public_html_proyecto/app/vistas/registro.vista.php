@@ -9,7 +9,7 @@
 
                 <!-- form -->
                 <form action="" method="post">
-                    <h4><i class="fab fa-xing-square"></i> XtudioPlay</h4>
+                    <h4><a href="/" class="text-decoration-none"><i class="fab fa-xing-square"></i> XtudioPlay</a></h4>
                     <hr>
                     <h3 class="font-weight-normal mb-4">Registrarse</h3>
                     <input class="form-control mb-3" type="text" name="inputName" placeholder="Nombre" required autofocus>
