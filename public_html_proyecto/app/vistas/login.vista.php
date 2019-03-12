@@ -1,6 +1,6 @@
 <?php require '_head.php'; ?>
 
-<body class="bg-dark text-white text-center">
+<body class="bg-light">
     <!-- .container -->
     <div class="container">
         <!-- .row>.col-md-4 -->
@@ -9,9 +9,9 @@
 
                 <!-- form -->
                 <form action="" method="post">
-                    <h4><a href="/" class="text-decoration-none"><i class="fab fa-xing-square"></i> XtudioPlay</a></h4>
+                    <h4><a href="/" class="text-xtudio text-decoration-none"><i class="fab fa-xing-square"></i> XtudioPlay</a></h4>
                     <hr>
-                    <h3 class="font-weight-normal mb-4">Iniciar sesión</h3>
+                    <h4 class="mb-4">Iniciar sesión</h4>
 
                     <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autofocus>
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required>

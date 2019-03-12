@@ -7,6 +7,10 @@ body {
     transition: background ease .3s;
 }
 
+.text-xtudio {
+    color: #4285F4;
+}
+
 .container.fondo-laptop {
     background: url('../img/laptop.svg');
     background-repeat: no-repeat;
@@ -27,12 +31,4 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
-
-#login form {
-    padding: 30px 15px;
-    border: solid 1px white;
-    border-radius: 15px;
-    background: white;
-    color: black;
 }

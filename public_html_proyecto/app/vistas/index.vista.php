@@ -3,7 +3,7 @@
 <body class="bg-light">
     <div class="container fondo-laptop">
         <section id="bienvenido">
-            <h1>Bienvenidos a <i class="fab fa-xing-square"></i> XtudioPlay</h1>
+            <h1>Bienvenidos a <span class="text-wrap text-xtudio"><i class="fab fa-xing-square"></i> XtudioPlay</span></h1>
             <p class="lead">Un lugar donde puedes expresar tus ideas.</p>
             <br>
             <div>
