@@ -23,10 +23,6 @@ try {
     // 4. Traer los datos
     $usuarios = $comando->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    var_export($usuarios);
-    echo "</pre>";
-
 } catch(PDOException $e) {
     echo $e->getMessage();
 }

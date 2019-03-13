@@ -3,3 +3,8 @@ Servidor: files.000webhost.com
 Nombre de usuario: xtudioplay
 Contraseña: aprendiendo_php
 Puerto: 21
+
+Base de datos online
+nombre: id8904345_proyecto_db
+usuario: id8904345_cristian
+contrasena: aprendiendo_php
