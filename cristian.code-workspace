@@ -1,0 +1,18 @@
+{
+	"folders": [{
+		"path": "C:\\xampp\\htdocs\\aprendiendo_php"
+	}],
+	"settings": {
+		"breadcrumbs.enabled": true,
+		"editor.cursorSmoothCaretAnimation": true,
+		"editor.fontSize": 16,
+		"editor.formatOnType": true,
+		"editor.formatOnSave": true,
+		"editor.lineHeight": 32,
+		"explorer.openEditors.visible": 0,
+		"editor.tabCompletion": "on",
+		"files.autoSave": "onFocusChange",
+		"php.validate.run": "onType",
+		"php.validate.executablePath": "C:/xampp/php/php.exe",
+	}
+}
