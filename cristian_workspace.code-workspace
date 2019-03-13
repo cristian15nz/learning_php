@@ -1,14 +1,16 @@
 {
-	"folders": [{
-		"path": "C:\\xampp\\htdocs\\aprendiendo_php"
-	}],
+	"folders": [
+		{
+			"path": "C:\\xampp\\htdocs\\aprendiendo_php"
+		}
+	],
 	"settings": {
 		"breadcrumbs.enabled": true,
 		"editor.cursorSmoothCaretAnimation": true,
-		"editor.fontSize": 16,
+		"editor.fontSize": 25,
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
-		"editor.lineHeight": 32,
+		"editor.lineHeight": 50,
 		"editor.smoothScrolling": true,
 		"editor.tabCompletion": "on",
 		"emmet.triggerExpansionOnTab": true,
@@ -17,7 +19,6 @@
 		"php.validate.executablePath": "C:/xampp/php/php.exe",
 		"php.validate.run": "onType",
 		"workbench.iconTheme": "vs-seti",
-		"workbench.tree.indent": 25,
 		// More
 	}
 }
