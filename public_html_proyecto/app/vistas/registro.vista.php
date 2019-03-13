@@ -30,10 +30,13 @@
             <!-- Mostrar usuarios registrados -->
             <div class="col-md-4">
                 <h5>Usuarios registrados</h5>
+
                 <ul>
-                    <?php foreach($usuarios as $usuario): ?>
-                    <li><?= $usuario['nombre'] ?> <b>@<?= $usuario['username'] ?></b> </li>
-                    <?php endforeach; ?>
+                    <?php
+                        foreach($usuarios as $usuario) {
+                            echo "<li>Tu {$usuario['nombre']} y {$usuario['username']} y {$usuario['correo']}</li>";
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
