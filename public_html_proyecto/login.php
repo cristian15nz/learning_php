@@ -2,7 +2,7 @@
 
 require "app/conexion.php";
 
-// 
+// Verificar si el inputUser existe
 if (isset($_POST['inputUser'])) {
     $datosUsuario = array(
         'username' => $_POST['inputUser'],
@@ -12,8 +12,6 @@ if (isset($_POST['inputUser'])) {
     // Preparar el query
     $sql = 'SELECT * FROM usuarios WHERE username = :username AND password = :password ';
     $comando = $conexion->prepare($sql);
-
-    // $comando->debugDumpParams();
 
     // Ejecutar el query
     $comando->execute($datosUsuario);
