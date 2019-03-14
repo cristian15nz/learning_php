@@ -67,7 +67,7 @@ if (isset($_POST['inputName'])){
 
         if ($respueta == true) {
             // Redireccionar a la pagina del login
-            header("Location: /learning_php/public_html_proyecto/login.php");
+            header("Location: /login.php");
         } else {
             echo "No se insertaron los datos";
         }
