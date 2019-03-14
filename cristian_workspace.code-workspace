@@ -1,9 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "C:\\xampp\\htdocs\\aprendiendo_php"
-		}
-	],
+	"folders": [{
+		"path": "C:\\xampp\\htdocs\\learning_php"
+	}],
 	"settings": {
 		"breadcrumbs.enabled": true,
 		"editor.cursorSmoothCaretAnimation": true,

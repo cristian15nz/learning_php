@@ -9,6 +9,14 @@ $user = "root";
 $password = "";
 $opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
+// Cambiar los valores para produccion
+if ($_SERVER['SERVER_NAME'] == "xtudioplay.000webhostapp.com") {
+    $host = "localhost";
+    $dbname = "132143_proyecto_db";
+    $user = "1341234_cristian";
+    $password = "aprendiendo_php";
+}
+
 try {
     // 1. Conectarnos a la base de datos
     $conexion = new PDO("mysql:host=$host;dbname=$dbname;", $user, $password, $opciones);
@@ -22,8 +30,7 @@ try {
 
     // 4. Traer los datos
     $usuarios = $comando->fetchAll(PDO::FETCH_ASSOC);
-
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     echo $e->getMessage();
 }
 
