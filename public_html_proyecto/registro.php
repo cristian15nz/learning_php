@@ -34,4 +34,48 @@ try {
     echo $e->getMessage();
 }
 
+
+if (isset($_POST['inputName'])){
+
+    // 
+    echo "<pre>";
+    var_export($_POST);
+    echo "</pre>";
+
+    $datosUsuarios = array(
+        'nombre' => $_POST['inputName'],
+        'correo' => $_POST['inputEmail'],
+        'username' => $_POST['inputUser'],
+        'password' => $_POST['inputPassword']
+    );
+    
+    echo "<pre>";
+    var_export($datosUsuarios);
+    echo "</pre>";
+    
+    // Validar 
+    if (false) {
+    
+    } else {
+        // Enviar los datos
+        // 1. Preparar el SQL (query)
+        $sqlInsert = "INSERT INTO usuarios(nombre, correo, username, password)
+                VALUES (:nombre, :correo, :username, :password)";
+        $comando = $conexion->prepare($sqlInsert);
+    
+        // 2. Ejecutarlo
+        $respueta = $comando->execute($datosUsuarios);
+
+        if ($respueta == true) {
+            echo "Datos insertados correctamente";
+        } else {
+            echo "No se insertaron los datos";
+        }
+    }
+
+}
+
+
+
+
 require "app/vistas/registro.vista.php";
