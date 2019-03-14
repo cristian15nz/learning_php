@@ -37,10 +37,9 @@ try {
 
 if (isset($_POST['inputName'])){
 
-    // 
-    echo "<pre>";
-    var_export($_POST);
-    echo "</pre>";
+    // echo "<pre>";
+    // var_export($_POST);
+    // echo "</pre>";
 
     $datosUsuarios = array(
         'nombre' => $_POST['inputName'],
@@ -49,9 +48,9 @@ if (isset($_POST['inputName'])){
         'password' => $_POST['inputPassword']
     );
     
-    echo "<pre>";
-    var_export($datosUsuarios);
-    echo "</pre>";
+    // echo "<pre>";
+    // var_export($datosUsuarios);
+    // echo "</pre>";
     
     // Validar 
     if (false) {
@@ -67,7 +66,8 @@ if (isset($_POST['inputName'])){
         $respueta = $comando->execute($datosUsuarios);
 
         if ($respueta == true) {
-            echo "Datos insertados correctamente";
+            // Redireccionar a la pagina del login
+            header("Location: /learning_php/public_html_proyecto/login.php");
         } else {
             echo "No se insertaron los datos";
         }
