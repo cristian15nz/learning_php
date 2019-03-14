@@ -12,8 +12,8 @@ $opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 // Cambiar los valores para produccion
 if ($_SERVER['SERVER_NAME'] == "xtudioplay.000webhostapp.com") {
     $host = "localhost";
-    $dbname = "132143_proyecto_db";
-    $user = "1341234_cristian";
+    $dbname = "id8904345_proyecto_db";
+    $user = "id8904345_cristian";
     $password = "aprendiendo_php";
 }
 
