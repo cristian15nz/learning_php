@@ -4,7 +4,8 @@ $host = "127.0.0.1";
 $dbname = "proyecto_db";
 $user = "root";
 $password = "";
-$opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+$opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
 
 // Cambiar los valores para produccion
 if ($_SERVER['SERVER_NAME'] == "xtudioplay.000webhostapp.com") {

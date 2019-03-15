@@ -17,26 +17,12 @@
                     <input class="form-control mb-3" type="email" name="inputEmail" placeholder="Email" required>
                     <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autocapitalize="off">
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required>
-                    <button class="btn btn-primary btn-block mb-3" type="submit">Registrarse</button>
+                    <button name="btnRegistro" class="btn btn-primary btn-block mb-3" type="submit">Registrarse</button>
                     <hr>
                     <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
                 </form>
 
             </div>
-
-            <!-- Mostrar usuarios registrados -->
-            <?php if (isset($usuarios) && count($usuarios) > 0) : ?>
-            <div class="col-md-4">
-                <h5>Usuarios registrados</h5>
-                <ul>
-                    <?php
-                    foreach ($usuarios as $usuario) {
-                        echo "<li> {$usuario['nombre']} <b>@{$usuario['username']}</b> </li>";
-                    }
-                    ?>
-                </ul>
-            </div>
-            <?php endif; ?>
         </div>
 
     </div>

@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require "app/conexion.php";
 
 // Verificar si el inputUser existe
@@ -17,12 +18,19 @@ if (isset($_POST['inputUser'])) {
     $comando->execute($datosUsuario);
 
     // Traer los datos
-    $resultado = $comando->fetchAll();
+    $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+    echo "<pre>";
+    var_dump($resultado);
+    echo "</pre>";
 
     $cantidadRegistros = count($resultado);
 
     if ($cantidadRegistros > 0) {
-        die('Bienvenido');
+        // 
+        $_SESSION['nombre'] = "Cristian";
+
+        // header("Location: principal.php ");
     } else {
         die('Usuario no existe');
     }
