@@ -46,7 +46,7 @@ if (isset($_POST['inputName'])){
         'nombre' => $_POST['inputName'],
         'correo' => $_POST['inputEmail'],
         'username' => $_POST['inputUser'],
-        'password' => $_POST['inputPassword']
+        'password' => password_hash($_POST['inputPassword'], PASSWORD_DEFAULT)
     );
     
     // echo "<pre>";

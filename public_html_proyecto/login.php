@@ -12,6 +12,7 @@ if(isset($_SESSION['usuario_id']) == true) {
 
 $mensajesError = array();
 
+//
 // Verificar si el inputUser existe
 if (isset($_POST['inputUser'])) {
     $datosUsuario = array(
@@ -20,11 +21,14 @@ if (isset($_POST['inputUser'])) {
     );
 
     // Preparar el query
-    $sql = 'SELECT * FROM usuarios WHERE username = :username AND password = :password ';
+    $sql = 'SELECT * FROM usuarios WHERE username = :username ';
     $comando = $conexion->prepare($sql);
 
+    // Asociar el :username con el valor
+    $comando->bindParam(":username", $datosUsuario['username']);
+
     // Ejecutar el query
-    $comando->execute($datosUsuario);
+    $comando->execute();
 
     // Traer los datos
     $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
@@ -32,12 +36,21 @@ if (isset($_POST['inputUser'])) {
     $cantidadRegistros = count($resultado);
 
     if ($cantidadRegistros > 0) {
-        // die('Bienvenido');
-        $_SESSION['usuario_id'] = $resultado[0]['id'];
-        $_SESSION['usuario_nombre'] = $resultado[0]['nombre'];
-        $_SESSION['usuario_username'] = $resultado[0]['username'];
+        // Verificar la contrasena del usuario
+        $contrasena = $datosUsuario['inputPassword']; // La contraseña que el usuario envia
+        $hash = $resultado[0]['password']; // Contrasena del base de datos (encriptada)
+        if (password_verify($contrasena, $hash)) {
+            // die('Bienvenido');
+            $_SESSION['usuario_id'] = $resultado[0]['id'];
+            $_SESSION['usuario_nombre'] = $resultado[0]['nombre'];
+            $_SESSION['usuario_username'] = $resultado[0]['username'];
 
-         header("Location: principal.php");
+            header("Location: principal.php");
+        } else {
+            // Almancenar un mensaje de error para mostrarlo al usuario
+            $mensajesError['usuario_incorrecto'] = "La contraseña es incorrecta";
+        }
+
     } else {
         // Almancenar un mensaje de error para mostrarlo al usuario
         $mensajesError['usuario_incorrecto'] = "El usuario o la contraseña son incorrectos";

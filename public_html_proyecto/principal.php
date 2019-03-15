@@ -9,9 +9,7 @@ if (isset($_SESSION['usuario_id']) == false) {
     header("Location: login.php");
 }
 
-echo "Bienvenido {$_SESSION['usuario_nombre']}";
-
-echo "<a href='logout.php'>Cerrar sesion</a>";
+$titulo = "XtudioPlay - Página principal";
 
 // Incluir la vista
 require "app/vistas/principal.vista.php";
