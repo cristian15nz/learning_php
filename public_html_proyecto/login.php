@@ -1,7 +1,16 @@
 <?php
 
+// Iniciar sesion
 session_start();
 require "app/conexion.php";
+
+// Si el usuario está logeado no puede ver esta página
+if(isset($_SESSION['usuario_id']) == true) {
+    // REDIRECCIONAR a la pagina principal
+    header("Location: principal.php");
+}
+
+$mensajesError = array();
 
 // Verificar si el inputUser existe
 if (isset($_POST['inputUser'])) {
@@ -30,11 +39,11 @@ if (isset($_POST['inputUser'])) {
 
          header("Location: principal.php");
     } else {
-        die('Usuario no existe');
+        // Almancenar un mensaje de error para mostrarlo al usuario
+        $mensajesError['usuario_incorrecto'] = "El usuario o la contraseña son incorrectos";
     }
 
 }
-
 
 $titulo = "XtudioPlay - Iniciar sesión";
 

@@ -16,7 +16,13 @@
                     <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autofocus autocapitalize="off">
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required>
                     <button class="btn btn-primary btn-block mb-3" type="submit">Iniciar sesión</button>
-                    <em class="text-danger">Usuario o contraseña incorrectos</em>
+                    <em class="text-danger">
+                        <?php
+                        if (isset($mensajesError['usuario_incorrecto'])) {
+                            echo $mensajesError['usuario_incorrecto'];
+                        }
+                        ?>
+                    </em>
                     <hr>
                     <div>¿No tienes una cuenta? <a href="registro.php">Regístrate</a></div>
                 </form>
