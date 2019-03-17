@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require "app/mis_funciones.php";
 require "app/conexion.php";
 
 // Verificar si el inputUser existe
@@ -20,10 +21,6 @@ if (isset($_POST['inputUser'])) {
     // Traer los datos
     $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    var_dump($resultado);
-    echo "</pre>";
-
     $cantidadRegistros = count($resultado);
 
     if ($cantidadRegistros > 0) {
@@ -40,4 +37,4 @@ if (isset($_POST['inputUser'])) {
 
 $titulo = "XtudioPlay - Iniciar sesión";
 
-require "app/vistas/login.vista.php"; 
+require vista("login");

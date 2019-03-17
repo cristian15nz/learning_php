@@ -1,9 +1,7 @@
 <?php
 
+session_start();
 require "app/conexion.php";
-
-$titulo = "XtudioPlay - Registrarse";
-
 
 // 2. Preparar el SQL (query)
 $sql = "SELECT * FROM usuarios";
@@ -45,5 +43,6 @@ if (isset($_POST['inputName'])) {
     }
 }
 
+$titulo = "XtudioPlay - Registrarse";
 
 require "app/vistas/registro.vista.php";

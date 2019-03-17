@@ -4,7 +4,7 @@
     <div class="container fondo-laptop">
         <section id="bienvenido">
             <h1>Bienvenidos a <span class="d-inline-block text-xtudio"><i class="fab fa-xing-square"></i> XtudioPlay</span></h1>
-            <p class="lead">Un lugar donde puedes compartir tus ideas.</p>
+            <p class="lead">Imagina. Crea. Comparte.</p>
             <br>
             <div>
                 <a class="btn btn-primary" href="login.php">Iniciar sesión</a>
