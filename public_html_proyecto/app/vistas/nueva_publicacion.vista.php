@@ -17,6 +17,33 @@
         <button class="btn btn-primary" name="btnCrearPublicacion">Crear publicacion</button>
     </form>
     </div>
+
+    <!-- Mostrar los datos de la base de datos -->
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+    // Recorrer todas las publicaciones
+    foreach($listadoPublicaciones as $publicacion) {
+        echo "<tr>
+                <th>{$publicacion['id']}</th>
+                <td>{$publicacion['titulo']}</td>
+                <td>{$publicacion['descripcion']}</td>
+                <td>{$publicacion['id_categoria']}</td>
+            </tr>";
+    }
+  ?>
+    
+    
+  </tbody>
+</table>
 </body>
 
 </html>
