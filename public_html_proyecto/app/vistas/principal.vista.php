@@ -14,6 +14,10 @@
     <a class="btn btn-danger btn-lg" href="#" role="button">Cerrar sesion</a>
 </div>
 
+<div>
+    <a class="btn btn-primary" href="nueva_publicacion.php">Crear publicacion</a>
+</div>
+
 </body>
 
 </html>

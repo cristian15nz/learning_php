@@ -37,7 +37,7 @@ if (isset($_POST['inputUser'])) {
 
     if ($cantidadRegistros > 0) {
         // Verificar la contrasena del usuario
-        $contrasena = $datosUsuario['inputPassword']; // La contraseña que el usuario envia
+        $contrasena = $datosUsuario['password']; // La contraseña que el usuario envia
         $hash = $resultado[0]['password']; // Contrasena del base de datos (encriptada)
         if (password_verify($contrasena, $hash)) {
             // die('Bienvenido');
