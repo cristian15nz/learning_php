@@ -18,6 +18,30 @@
     <a class="btn btn-primary" href="nueva_publicacion.php">Crear publicacion</a>
 </div>
 
+<div>
+    <h3>Listado de tus publicacioes:</h3>
+    <div class="row">
+    <?php 
+
+$publicaciones = selectPublicaciones($conexion);
+
+foreach($publicaciones as $publicacion) {
+    echo "<div class='col-md-4'>
+            <div class='card'>
+                <div class='card-body'>
+                <h5 class='card-title'>#{$publicacion['id']} {$publicacion['titulo']}</h5>
+                <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['id_categoria']}</h6>
+                <p class='card-text'>{$publicacion['descripcion']}</p>
+                </div>
+            </div>
+        </div>";
+}
+
+?>
+
+    </div>
+</div>
+
 </body>
 
 </html>

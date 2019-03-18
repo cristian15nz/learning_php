@@ -2,6 +2,7 @@
 
 // Iniciar sesion
 session_start();
+require "app/mis_funciones.php";
 require "app/conexion.php";
 
 // Si el usuario está logeado no puede ver esta página
