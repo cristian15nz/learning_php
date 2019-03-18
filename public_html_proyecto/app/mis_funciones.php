@@ -1,13 +1,12 @@
 <?php
 
+// Definir la URL BASE
+define("URL_BASE", '/');
+
 function imprimir($valor_recibido) {
     echo "<pre>";
     var_export($valor_recibido);
     echo "</pre>";
-}
-
-function nombre() {
-    return ".sa.dffsjsfdjafdsasdffsd";
 }
 
 function vista($nombre) {

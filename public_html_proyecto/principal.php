@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require "app/conexion.php";
 require "app/mis_funciones.php";
+require "app/conexion.php";
 
 // Si el usuario no está logeado
 if (isset($_SESSION['usuario_id']) == false) {
@@ -10,7 +10,9 @@ if (isset($_SESSION['usuario_id']) == false) {
     header("Location: login.php");
 }
 
+// Traer las publicaciones
+$publicaciones = selectPublicaciones($conexion);
+
 $titulo = "XtudioPlay - Página principal";
 
-// Incluir la vista
-require "app/vistas/principal.vista.php";
+require vista("principal");

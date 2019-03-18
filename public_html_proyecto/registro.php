@@ -1,22 +1,9 @@
 <?php
+
 session_start();
+require "app/mis_funciones.php";
+require "app/conexion.php";
 
-$titulo = "XtudioPlay - Registrarse";
-
-
-$host = "127.0.0.1";
-$dbname = "proyecto_db";
-$user = "root";
-$password = "";
-$opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-// Cambiar los valores para produccion
-if ($_SERVER['SERVER_NAME'] == "xtudioplay.000webhostapp.com") {
-    $host = "localhost";
-    $dbname = "id8904345_proyecto_db";
-    $user = "id8904345_cristian";
-    $password = "aprendiendo_php";
-}
 
 try {
     // 1. Conectarnos a la base de datos
@@ -38,20 +25,12 @@ try {
 
 if (isset($_POST['inputName'])){
 
-    // echo "<pre>";
-    // var_export($_POST);
-    // echo "</pre>";
-
     $datosUsuarios = array(
         'nombre' => $_POST['inputName'],
         'correo' => $_POST['inputEmail'],
         'username' => $_POST['inputUser'],
         'password' => password_hash($_POST['inputPassword'], PASSWORD_DEFAULT)
     );
-    
-    // echo "<pre>";
-    // var_export($datosUsuarios);
-    // echo "</pre>";
     
     // Validar 
     if (false) {
@@ -68,7 +47,7 @@ if (isset($_POST['inputName'])){
 
         if ($respueta == true) {
             // Redireccionar a la pagina del login
-            header("Location: /login.php");
+            header("Location: login.php");
         } else {
             echo "No se insertaron los datos";
         }
@@ -77,6 +56,6 @@ if (isset($_POST['inputName'])){
 }
 
 
+$titulo = "XtudioPlay - Registrarse";
 
-
-require "app/vistas/registro.vista.php";
+require vista("registro");

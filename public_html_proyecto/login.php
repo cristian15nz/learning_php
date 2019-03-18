@@ -1,19 +1,17 @@
 <?php
 
-// Iniciar sesion
 session_start();
 require "app/mis_funciones.php";
 require "app/conexion.php";
 
 // Si el usuario está logeado no puede ver esta página
-if(isset($_SESSION['usuario_id']) == true) {
+if (isset($_SESSION['usuario_id']) == true) {
     // REDIRECCIONAR a la pagina principal
     header("Location: principal.php");
 }
 
 $mensajesError = array();
 
-//
 // Verificar si el inputUser existe
 if (isset($_POST['inputUser'])) {
     $datosUsuario = array(
@@ -61,4 +59,4 @@ if (isset($_POST['inputUser'])) {
 
 $titulo = "XtudioPlay - Iniciar sesión";
 
-require "app/vistas/login.vista.php"; 
+require vista("login");

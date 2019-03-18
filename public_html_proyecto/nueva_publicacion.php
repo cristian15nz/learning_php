@@ -6,7 +6,7 @@ require "app/conexion.php";
 
 /* Codigo para guardar la publicacion */
 //  Verificar que el usuario haya hecho click en el boton
-if(isset($_POST['btnCrearPublicacion'])) {
+if (isset($_POST['btnCrearPublicacion'])) {
     // Guardar los datos en un array para insertarlos a la base de datos
     $publicacion = array(
         'titulo' => $_POST['inputTitulo'],
@@ -26,12 +26,10 @@ if(isset($_POST['btnCrearPublicacion'])) {
     // 3. Traer los datos
     $resultado = $comando->rowCount();
 
-    imprimir($resultado);
-
     if ($resultado > 0) {
-        echo "Datos insertados :D";
+        echo "Datos insertados.";
     } else {
-        echo "Los datos no fueron insertados :(";
+        echo "Los datos no fueron insertados.";
     }
 }
 
