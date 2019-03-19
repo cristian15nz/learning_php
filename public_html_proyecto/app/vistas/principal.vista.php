@@ -6,7 +6,7 @@
         <div class="container">
             <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> XtudioPlay</a>
 
-            <form action="" class="form-inline">lo
+            <form action="" class="form-inline">
                 <input type="search" class="form-control form-control-sm mr-1" placeholder="Buscar...">
                 <button type="submit" class="btn btn-sm btn-outline-primary" name="btnBuscar">
                     <i class="fas fa-search"></i>
