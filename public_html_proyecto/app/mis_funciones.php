@@ -3,6 +3,19 @@
 // Definir la URL BASE
 define("URL_BASE", '/');
 
+/* Mi funcion para mostrar los errores */
+function manejoErrores($codigo, $mensaje, $archivo, $linea) {
+    echo "<div class='alert alert-danger' role='alert'>
+            <b>Ha ocurrido un error.</b>
+            <div>
+                <p><i>$mensaje</i></p>
+                <p>Error en la linea <b>$linea</b> del archivo <b>$archivo</b></p>
+            </div>
+        </div>";
+}
+
+set_error_handler("manejoErrores");
+
 function imprimir($valor_recibido) {
     echo "<pre>";
     var_export($valor_recibido);
