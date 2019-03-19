@@ -17,6 +17,13 @@
                     <input class="form-control mb-3" type="text" name="inputUser" placeholder="Usuario" required autocapitalize="off" autocomplete="off">
                     <input class="form-control mb-3" type="password" name="inputPassword" placeholder="Contraseña" required autocomplete="off">
                     <button class="btn btn-primary btn-block mb-3" type="submit">Registrarse</button>
+                    <div class="text-danger">
+                        <?php
+                        if (isset($mensaje)) {
+                            echo $mensaje;
+                        }
+                        ?>
+                    </div>
                     <hr>
                     <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
                 </form>
