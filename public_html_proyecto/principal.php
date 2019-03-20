@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario_id']) == false) {
 }
 
 // Traer las publicaciones
-$publicaciones = selectPublicaciones($conexion);
+$listadoPublicaciones = selectPublicacionesDelUsuario($conexion, $_SESSION['usuario_id']);
 
 $titulo = "XtudioPlay - Página principal";
 

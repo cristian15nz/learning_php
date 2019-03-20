@@ -8,10 +8,11 @@
         <input class="form-control" type="text" name="inputTitulo" placeholder="Titulo" required>
         <input class="form-control" type="text" name="inputDescripcion" placeholder="Descripcion" required>
         <select class="form-control" name="selectCategoria" required>
-            <option>--Selecciona--</option>
-            <option value="1">Tecnologia</option>
-            <option value="2">Salud</option>
-            <option value="3">Ocio</option>
+            <?php
+                foreach ($categorias as $categoria) {
+                    echo "<option value='{$categoria['id']}'>{$categoria['nombre']}</option>";
+                }
+            ?>
         </select>
         <input class="form-control" type="file" name="inputArchivo">
         <button class="btn btn-primary" name="btnCrearPublicacion">Crear publicacion</button>

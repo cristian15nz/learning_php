@@ -24,7 +24,7 @@
             <nav class="nav mb-4 pt-1 pb-1">
                 <a class="nav-link active" href="#">Inicio</a>
                 <a class="nav-link" href="#">Mis publicaciones
-                    <span class="badge badge-light"><?php echo count($publicaciones); ?></span></a>
+                    <span class="badge badge-light"><?php echo count($listadoPublicaciones); ?></span></a>
             </nav>
         </div>
     </div>
@@ -44,7 +44,7 @@
             <?php
 
             // Si no hay publicaciones, mostrar el siguiente mensaje
-            /*if (isset($publicaciones) && count($publicaciones) < 1) {
+            /*if (isset($listadoPublicaciones) && count($listadoPublicaciones) < 1) {
                 echo "<div class='bg-light border rounded text-center p-5'>
                         <img src='recursos/img/post.svg' alt='post' style='width: 150px;'>
                         <h4 class='mt-3 mb-2'>Hey {$_SESSION['usuario_nombre']} al parecer no tienes publicaciones.</h4>
@@ -57,7 +57,7 @@
 
             <div class="col-md-12">
                 <h2 class="font-weight-normal">Tus publicaciones recientes
-                    <small class="badge badge-secondary font-weight-light"><?php echo count($publicaciones); ?></small>
+                    <small class="badge badge-secondary font-weight-light"><?php echo count($listadoPublicaciones); ?></small>
                 </h2>
                 <hr>
             </div>
@@ -65,8 +65,8 @@
             <?php
 
             // Mostrar las publicaciones (si las hay)
-            if (count($publicaciones) > 0) {
-                foreach ($publicaciones as $publicacion) {
+            if (count($listadoPublicaciones) > 0) {
+                foreach ($listadoPublicaciones as $publicacion) {
                     echo "<div class='col-md-4 mb-3'>
                             <div class='card'>
                                 <div class='card-body'>
