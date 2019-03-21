@@ -7,12 +7,13 @@ require "app/conexion.php";
 /* Codigo para guardar la publicacion */
 //  Verificar que el usuario haya hecho click en el boton
 if (isset($_POST['btnCrearPublicacion'])) {
+    
     // Guardar los datos en un array para insertarlos a la base de datos
     $publicacion = array(
         'titulo' => $_POST['inputTitulo'],
         'descripcion' => $_POST['inputDescripcion'],
         'id_categoria' => $_POST['selectCategoria'],
-        'nombre_archivo' => $_POST['inputArchivo'],
+        'nombre_archivo' => "",
         'creado_por' => $_SESSION['usuario_id']
     );
 
@@ -32,6 +33,26 @@ if (isset($_POST['btnCrearPublicacion'])) {
     } else {
         echo "Los datos no fueron insertados.";
     }
+
+    // Subir el archivo
+    if (isset($_FILES['inputArchivo'])) {
+        $destino = "C:\\xampp\\htdocs\\learning_php\\public_html_proyecto\\recursos\\archivos";
+        $nombreArchivo = $_FILES['inputArchivo']['name'];
+        $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
+
+        // Concatenarle el nombre real del archivo a la variable destino
+        $destino .= DIRECTORY_SEPARATOR . $nombreArchivo;
+
+        $subido = move_uploaded_file($nombreArchivoTemp, $destino);
+
+        if ($subido == true) {
+            echo "El archivo se subió correctamente";
+        } else {
+            echo "El archivo no se subió correctamente";
+        }
+    }
+
+
 }
 
 /* Fin del codigo para guardar */
@@ -43,8 +64,6 @@ $titulo = "Crear publicación";
 
 // Definir las variables que voy a utilizar en la vista
 $categorias = selectCategorias($conexion);
-
-
 
 
 require vista("nueva_publicacion");
