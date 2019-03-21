@@ -1,33 +1,8 @@
 <?php require "_head.php"; ?>
 
 <body class="bg-white">
-    <!-- Barra de navegacion -->
-    <nav class="navbar navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand text-primary" href="#"><i class="fab fa-xing-square"></i> XtudioPlay</a>
 
-            <form action="" class="form-inline">
-                <input type="search" class="form-control form-control-sm mr-1" placeholder="Buscar...">
-                <button type="submit" class="btn btn-sm btn-outline-primary" name="btnBuscar">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-
-            <a href="logout.php" class="text-danger"></i> Cerrar sesión</a>
-
-        </div>
-    </nav>
-
-    <!--  Menu  -->
-    <div class="shadow-sm">
-        <div class="container">
-            <nav class="nav mb-4 pt-1 pb-1">
-                <a class="nav-link active" href="#">Inicio</a>
-                <a class="nav-link" href="#">Mis publicaciones
-                    <span class="badge badge-light"><?php echo count($listadoPublicaciones); ?></span></a>
-            </nav>
-        </div>
-    </div>
+<?php require "_menu.php"; ?>
 
     <!--  Saludo  -->
     <div class="jumbotron">
@@ -70,6 +45,7 @@
                     echo "<div class='col-md-4 mb-3'>
                             <div class='card'>
                                 <div class='card-body'>
+                                <img class='card-img' src='recursos/archivos/rafael.jpg' alt='Titulo de la imagen' />
                                 <h5 class='card-title'>#{$publicacion['id']} {$publicacion['titulo']}</h5>
                                 <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['id_categoria']}</h6>
                                 <p class='card-text'>{$publicacion['descripcion']}</p>
