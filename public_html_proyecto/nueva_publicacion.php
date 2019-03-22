@@ -47,6 +47,16 @@ if (isset($_POST['btnCrearPublicacion'])) {
 
         if ($subido == true) {
             echo "El archivo se subió correctamente";
+
+            // Obtener el ultimo id insertado en la tabla de publicaciones
+            $ultimoIdInsertado = $conexion->lastInsertId();
+            
+            // Asociar (actualizar) el registro con el nombre del archivo
+            $sqlUpdate = "UPDATE publicaciones SET nombre_archivo = '$nombreArchivo' WHERE id = $ultimoIdInsertado";
+            $comando = $conexion->prepare($sqlUpdate);
+            $comando->execute();
+            $resultado = $comando->rowCount();     
+
         } else {
             echo "El archivo no se subió correctamente";
         }
