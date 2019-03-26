@@ -29,5 +29,32 @@ if ( isset($_GET['accion']) && isset($_GET['id']) ) {
     //    En caso verdadero: actualizar
     //    En caso falso: insertar
 
+    if ($_GET['accion'] == 'actualizar' && isset($_GET['id'])) {
+        // Logica de actualizar
+        $sql = '';
+    } else {
+        // Logica que inserta....... que actualmente poseen
+        $sql = "INSERT INTO categorias SET nombre";
+    }
+    
 
 }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="hidden" name="id_categoria" value="<?php echo $_GET['id'] ?? "" ?>">
+        <input type="text" placeholder="Nombre" value="<?php echo $_GET['nombre'] ?? "" ?>"> 
+        <input type="button" value="guardar">
+    </form>
+</body>
+</html>
