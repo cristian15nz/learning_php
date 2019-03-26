@@ -9,7 +9,7 @@ if ( isset($_GET['accion']) && isset($_GET['id']) ) {
     // Accion de borrar
     if ($_GET['accion'] == 'borrar') {
         echo "Logica para borrar";
-        // Borrado fisico
+        // Borrado fisico 
         $sql = "DELETE FROM categorias WHERE id = $idCategoria ";
 
         // Borrado logico
