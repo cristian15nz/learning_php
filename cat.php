@@ -17,9 +17,17 @@ if ( isset($_GET['accion']) && isset($_GET['id']) ) {
 
     }
 
-    // Accion de actualizar
-    if ($_GET['accion'] == 'actualizar') {
-        echo "Logica para actualizar";
-    }
+    // Acción de actualizar
+    // ------ Esta parte va cuando se inserta en el formulario
+
+    // 1. Definir un input type hidden name="id_categoria" 
+    //    Este input va a guardar el valor del id enviado 
+    //    por el GET
+
+    // 2. Antes de hacer el insert de las categorias
+    //    Preguntar si existe ese input
+    //    En caso verdadero: actualizar
+    //    En caso falso: insertar
+
 
 }
